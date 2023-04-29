@@ -1,3 +1,18 @@
+<?php
+
+// This should be equal to: PATH_TO_VANGUARD_FOLDER/extra/auth.php
+require_once __DIR__ . 'extra/auth.php';
+
+// Here we just check if user is not 
+// logged in, and in that case we redirect
+// the user to vanguard login page.
+if (! Auth::check()) {
+    redirectTo('login');
+}
+
+?>
+
+
 <!DOCTYPE html>
 
 <html
